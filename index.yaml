@@ -1,0 +1,58 @@
+apiVersion: v1
+entries:
+  flux2:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-10T17:03:32.119697215Z"
+    description: A Helm chart for Kubernetes
+    digest: 384c10a479d4c0e21241f4b41943c3ea338c7a8551fe43f4cc05b6749f30ac06
+    name: flux2
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/flux2-0.80.2/flux2-0.80.2.tgz
+    version: 0.80.2
+  git-proxy:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-03-10T17:03:32.250371462Z"
+    description: A Helm chart for Kubernetes
+    digest: 3edb268b8eaf3a58c29a94621ecfd9222848d7d4099168a45ef3636b9d6c34f2
+    name: git-proxy
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/git-proxy-0.0.16/git-proxy-0.0.16.tgz
+    version: 0.0.16
+  wiz-admission-controller:
+  - apiVersion: v2
+    appVersion: 1.0.152921
+    created: "2023-03-10T17:03:32.380087195Z"
+    description: Wiz admission controller
+    digest: 62dd61a53b70e9fcdc26672b6bd787bdbcf6ec80c9651949c8ae17dc5dcdaf1a
+    name: wiz-admission-controller
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-admission-controller-1.1.0/wiz-admission-controller-1.1.0.tgz
+    version: 1.1.0
+  wiz-broker:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-10T17:03:32.526561164Z"
+    description: A Helm chart for Kubernetes
+    digest: 584bccbe8151b3a7376475c3e43328341786873851335ea57014c2bb7b3686d0
+    name: wiz-broker
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-broker-0.3.0/wiz-broker-0.3.0.tgz
+    version: 0.3.0
+  wiz-kubernetes-connector:
+  - apiVersion: v2
+    appVersion: 1.0.150465
+    created: "2023-03-10T17:03:32.729850736Z"
+    description: A Helm chart for connecting Kubernetes clusters to Wiz
+    digest: 7a56e8a066b20af092b990626f1acdb5b0452d2a2a6e893d9c8d3ea28d5158fc
+    name: wiz-kubernetes-connector
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-connector-1.1.0/wiz-kubernetes-connector-1.1.0.tgz
+    version: 1.1.0
+generated: "2023-03-10T17:03:32.730149641Z"
