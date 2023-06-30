@@ -10,7 +10,9 @@ metadata:
   annotations:
     "helm.sh/hook": pre-delete
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
-
+    {{- with .Values.autoCreateConnector.autoDeleteJobAnnotations }}
+      {{- toYaml . | nindent 4 }}
+    {{- end }}
 spec:
   manualSelector: true
   selector:

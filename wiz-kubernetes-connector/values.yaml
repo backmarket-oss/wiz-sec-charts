@@ -42,7 +42,10 @@ autoCreateConnector:
     annotations: {}
     # The name of the service account to use.
     name: "wiz-auto-modify-connector"
-  
+
+  autoCreateJobAnnotations: {} # Annotations to add to the auto-create Job (ArgoCD hooks...)
+  autoDeleteJobAnnotations: {} # Annotations to add to the auto-delete Job (ArgoCD hooks...)
+
   podCustomEnvironmentVariables: [] # Additional environment variables to add to the components Pods as pairs “name”, “value”.
   podCustomEnvironmentVariablesFile: ""
   
