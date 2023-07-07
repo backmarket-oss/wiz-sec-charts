@@ -1,12 +1,13 @@
 #!/bin/bash
+set -e
 
-PACKAGE_VERSION=$(helm show chart ${PACKAGE} | grep version | cut -d " " -f 2)
+PACKAGE_VERSION=$(helm show chart ${PACKAGE} | grep version | cut -d " " -f 2 | tr -d '[:space:]')
 PACKAGE_FULL_NAME="${PACKAGE}-${PACKAGE_VERSION}.tgz"
 git config user.email "circleci@wiz.io"
 git config user.name "CircleCI"
 
 # Update package dependencies
-helm dependency update
+helm dependency update $PACKAGE
 
 # Package the chart with diffs
 helm package $PACKAGE
