@@ -3,6 +3,16 @@ entries:
   flux2:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-07-11T13:25:05.581158489Z"
+    description: A Helm chart for Kubernetes
+    digest: 9b301ffc2dba07a6dc4cb8c3dceed0714a113974aa1042731bd88efe3b46fb0c
+    name: flux2
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/flux2-2023.07.11/flux2-2023.07.11.tgz
+    version: 2023.07.11
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-07-07T13:20:35.054306292Z"
     description: A Helm chart for Kubernetes
     digest: d7682e62bfe0abf05ac99f13226504ffdd68a2aa8e628a1f1048674fecb02e46
@@ -53,6 +63,16 @@ entries:
     - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/git-proxy-0.0.16/git-proxy-0.0.16.tgz
     version: 0.0.16
   wiz-admission-controller:
+  - apiVersion: v2
+    appVersion: "2.1"
+    created: "2023-07-11T13:25:05.90234595Z"
+    description: Wiz admission controller
+    digest: 6da4cfb67f349023d70ac8b2ec885a13d61f9ef6415613f5194ab9f4fff06004
+    name: wiz-admission-controller
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-admission-controller-3.0.2/wiz-admission-controller-3.0.2.tgz
+    version: 3.0.2
   - apiVersion: v2
     appVersion: "2.1"
     created: "2023-06-30T10:00:46.883579375Z"
@@ -117,6 +137,16 @@ entries:
   wiz-kubernetes-connector:
   - apiVersion: v2
     appVersion: "2.2"
+    created: "2023-07-11T13:25:06.16578315Z"
+    description: A Helm chart for connecting Kubernetes clusters to Wiz
+    digest: 73a5e4e7309425e6a90d35b79c7c3dbdee128c88e7cd652ce0305c23e7977952
+    name: wiz-kubernetes-connector
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-connector-2.2.11/wiz-kubernetes-connector-2.2.11.tgz
+    version: 2.2.11
+  - apiVersion: v2
+    appVersion: "2.2"
     created: "2023-07-07T13:20:35.224823489Z"
     description: A Helm chart for connecting Kubernetes clusters to Wiz
     digest: ccdf0dac73b5048dd3f50d1790d647a4c8b155c79869f96cbee2f597efee370a
@@ -156,6 +186,28 @@ entries:
     - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-connector-1.1.0/wiz-kubernetes-connector-1.1.0.tgz
     version: 1.1.0
   wiz-kubernetes-integration:
+  - apiVersion: v2
+    created: "2023-07-11T13:25:06.363021417Z"
+    dependencies:
+    - condition: wiz-kubernetes-connector.enabled
+      name: wiz-kubernetes-connector
+      repository: https://wiz-sec.github.io/charts
+      version: '>=2.2.8'
+    - condition: wiz-admission-controller.enabled
+      name: wiz-admission-controller
+      repository: https://wiz-sec.github.io/charts
+      version: '>=3.0.1'
+    - condition: wiz-sensor.enabled
+      name: wiz-sensor
+      repository: https://wiz-sec.github.io/charts
+      version: '>=1.0.2304'
+    description: A Helm chart for Kubernetes
+    digest: 9b463ffc2826b7453a55ac18ec68a8f4e1417312485485be76e38e835fa36ba4
+    name: wiz-kubernetes-integration
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-integration-0.1.20/wiz-kubernetes-integration-0.1.20.tgz
+    version: 0.1.20
   - apiVersion: v2
     created: "2023-07-07T13:20:35.394570371Z"
     dependencies:
@@ -217,4 +269,4 @@ entries:
     urls:
     - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-sensor-1.0.2142/wiz-sensor-1.0.2142.tgz
     version: 1.0.2142
-generated: "2023-07-07T13:20:35.560674682Z"
+generated: "2023-07-11T13:25:06.538362144Z"
