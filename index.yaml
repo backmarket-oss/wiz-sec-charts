@@ -137,6 +137,16 @@ entries:
   wiz-kubernetes-connector:
   - apiVersion: v2
     appVersion: "2.2"
+    created: "2023-07-11T13:49:52.034933722Z"
+    description: A Helm chart for connecting Kubernetes clusters to Wiz
+    digest: 434329ce6099c8617bb5815f982ed13bfda64739f2bb72e4119f3e1d05747ad8
+    name: wiz-kubernetes-connector
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-connector-2.2.12-bm/wiz-kubernetes-connector-2.2.12-bm.tgz
+    version: 2.2.12-bm
+  - apiVersion: v2
+    appVersion: "2.2"
     created: "2023-07-11T13:25:06.16578315Z"
     description: A Helm chart for connecting Kubernetes clusters to Wiz
     digest: 73a5e4e7309425e6a90d35b79c7c3dbdee128c88e7cd652ce0305c23e7977952
@@ -186,6 +196,28 @@ entries:
     - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-connector-1.1.0/wiz-kubernetes-connector-1.1.0.tgz
     version: 1.1.0
   wiz-kubernetes-integration:
+  - apiVersion: v2
+    created: "2023-07-11T13:49:52.299583752Z"
+    dependencies:
+    - condition: wiz-kubernetes-connector.enabled
+      name: wiz-kubernetes-connector
+      repository: https://wiz-sec.github.io/charts
+      version: '>=2.2.8'
+    - condition: wiz-admission-controller.enabled
+      name: wiz-admission-controller
+      repository: https://wiz-sec.github.io/charts
+      version: '>=3.0.1'
+    - condition: wiz-sensor.enabled
+      name: wiz-sensor
+      repository: https://wiz-sec.github.io/charts
+      version: '>=1.0.2304'
+    description: A Helm chart for Kubernetes
+    digest: 81fb587596f52ddd3cb651a5542ec4796b64092abcea7e5a03ed73a7c651dbb4
+    name: wiz-kubernetes-integration
+    type: application
+    urls:
+    - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-kubernetes-integration-0.1.21/wiz-kubernetes-integration-0.1.21.tgz
+    version: 0.1.21
   - apiVersion: v2
     created: "2023-07-11T13:25:06.363021417Z"
     dependencies:
@@ -269,4 +301,4 @@ entries:
     urls:
     - https://github.com/backmarket-oss/wiz-sec-charts/releases/download/wiz-sensor-1.0.2142/wiz-sensor-1.0.2142.tgz
     version: 1.0.2142
-generated: "2023-07-11T13:25:06.538362144Z"
+generated: "2023-07-11T13:49:52.433382539Z"
